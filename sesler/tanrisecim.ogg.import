@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tanrisecim.ogg-6c52c7003dcc1684413220012ce8e829.oggstr"
+
+[deps]
+
+source_file="res://sesler/tanrisecim.ogg"
+dest_files=[ "res://.import/tanrisecim.ogg-6c52c7003dcc1684413220012ce8e829.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

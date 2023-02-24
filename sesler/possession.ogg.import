@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/possession.ogg-1593e2055a085fcfdf57c808db2bc62e.oggstr"
+
+[deps]
+
+source_file="res://sesler/possession.ogg"
+dest_files=[ "res://.import/possession.ogg-1593e2055a085fcfdf57c808db2bc62e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Land of fearless.ogg-54297bca3a18fcc60fa12bdfb6dfbda9.oggstr"
+
+[deps]
+
+source_file="res://sesler/Land of fearless.ogg"
+dest_files=[ "res://.import/Land of fearless.ogg-54297bca3a18fcc60fa12bdfb6dfbda9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

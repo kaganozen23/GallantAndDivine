@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FoxieEpic.OGG-324c5d1bcbf624a87247165026e954ad.oggstr"
+
+[deps]
+
+source_file="res://sesler/FoxieEpic.OGG"
+dest_files=[ "res://.import/FoxieEpic.OGG-324c5d1bcbf624a87247165026e954ad.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

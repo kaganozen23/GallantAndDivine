@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zaman_atlama.ogg-16f6afeeed36dfc6c615bbb72b824959.oggstr"
+
+[deps]
+
+source_file="res://sesler/zaman_atlama.ogg"
+dest_files=[ "res://.import/zaman_atlama.ogg-16f6afeeed36dfc6c615bbb72b824959.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Heroic Demise.ogg-2693debeb13f0b68322d86bf0054a298.oggstr"
+
+[deps]
+
+source_file="res://sesler/Heroic Demise.ogg"
+dest_files=[ "res://.import/Heroic Demise.ogg-2693debeb13f0b68322d86bf0054a298.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

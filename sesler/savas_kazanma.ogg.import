@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/savas_kazanma.ogg-b9b46806fd26db3ef15a5ef367b69b45.oggstr"
+
+[deps]
+
+source_file="res://sesler/savas_kazanma.ogg"
+dest_files=[ "res://.import/savas_kazanma.ogg-b9b46806fd26db3ef15a5ef367b69b45.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

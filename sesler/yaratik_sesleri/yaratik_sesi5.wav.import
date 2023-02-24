@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yaratik_sesi5.wav-d6ba3114f1735c2c43adf62d88a741c0.sample"
+
+[deps]
+
+source_file="res://sesler/yaratik_sesleri/yaratik_sesi5.wav"
+dest_files=[ "res://.import/yaratik_sesi5.wav-d6ba3114f1735c2c43adf62d88a741c0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/DarkWinds.OGG-a7dfbee67186007cb8150b5b8f98e285.oggstr"
+
+[deps]
+
+source_file="res://sesler/DarkWinds.OGG"
+dest_files=[ "res://.import/DarkWinds.OGG-a7dfbee67186007cb8150b5b8f98e285.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
