@@ -1,0 +1,145 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://resimler/popup_baslik_kutusu.webp" type="Texture" id=1]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resimler/popup_arkaplan_genel.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/popup_metin_kutusu.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/popup_buton_normal.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/popup_buton_basili.webp" type="Texture" id=6]
+[ext_resource path="res://sceneler/PopupGenel.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="PopupGenel" type="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -367.0
+margin_right = 288.0
+margin_bottom = 367.0
+script = ExtResource( 7 )
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.0
+margin_top = -367.0
+margin_right = 275.0
+margin_bottom = 367.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="TextureRect" parent="Arkaplan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -266.0
+margin_top = 25.0
+margin_right = 265.0
+margin_bottom = 98.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="Arkaplan/Baslik"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.5
+margin_top = -33.5
+margin_right = 172.5
+margin_bottom = 15.5
+custom_fonts/font = SubResource( 1 )
+text = "Congratulations!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metin" type="TextureRect" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 83.0
+margin_right = -25.0
+margin_bottom = -25.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metin" type="Label" parent="Arkaplan/Metin"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 37.0
+margin_top = 105.0
+margin_right = -38.0
+margin_bottom = -94.0
+custom_fonts/font = SubResource( 2 )
+text = "You have successfully signed up for Gallant and Divine. A notification email has been sent to your address. Please check your mailbox for verification code. You shall then  play freely. Thank you."
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TamamButonu" type="TextureButton" parent="Arkaplan/Metin"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -103.5
+margin_top = -73.0
+margin_right = 103.5
+margin_bottom = -23.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Okay" type="Label" parent="Arkaplan/Metin/TamamButonu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Okay"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="popup_hide" from="." to="." method="_on_PopupGenel_popup_hide"]
+[connection signal="pressed" from="Arkaplan/Metin/TamamButonu" to="." method="_on_TamamButonu_pressed"]

@@ -1,0 +1,224 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://resimler/titanomahia_arkaplan.webp" type="Texture" id=1]
+[ext_resource path="res://efektler/yildiz.webp" type="Texture" id=2]
+[ext_resource path="res://efektler/doner_mavi.webp" type="Texture" id=3]
+[ext_resource path="res://efektler/simsek_buyuk.webp" type="Texture" id=4]
+[ext_resource path="res://sceneler/tali_sahneler/Titanomahia_sonrasi.gd" type="Script" id=5]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.434343, 1 )
+colors = PoolColorArray( 0.589152, 0.537964, 0.882812, 1, 0.409943, 0.478066, 0.789062, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+lifetime_randomness = 0.43
+emission_shape = 2
+emission_box_extents = Vector3( 100, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+initial_velocity_random = 0.25
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 72.65
+damping_random = 0.41
+angle = 10.0
+angle_random = 0.71
+color_ramp = SubResource( 3 )
+
+[sub_resource type="CanvasItemMaterial" id=5]
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 8.7
+scale = 3.0
+
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+gravity = Vector3( 100, 0, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 10.0
+angle = 292.2
+angle_random = 0.48
+scale = 0.7
+
+[sub_resource type="StreamTexture" id=8]
+flags = 4
+load_path = "res://.import/isik.webp-b8bc0ab2fcbf8750b5af47dbf0a12f9a.stex"
+
+[sub_resource type="ParticlesMaterial" id=9]
+emission_shape = 1
+emission_sphere_radius = 30.0
+flag_disable_z = true
+gravity = Vector3( -100, 0, 0 )
+initial_velocity = 50.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 10.0
+angle = 292.2
+angle_random = 0.48
+scale = 0.7
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Ana" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Simsek" type="Particles2D" parent="TextureRect"]
+material = SubResource( 1 )
+position = Vector2( 388.843, 670.318 )
+amount = 1
+lifetime = 0.7
+speed_scale = 0.5
+explosiveness = 0.78
+randomness = 0.45
+process_material = SubResource( 4 )
+texture = ExtResource( 4 )
+
+[node name="EmmeSonrasi" type="Particles2D" parent="TextureRect"]
+material = SubResource( 5 )
+position = Vector2( 353.553, 645.867 )
+emitting = false
+lifetime = 2.0
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.36
+process_material = SubResource( 6 )
+texture = ExtResource( 3 )
+
+[node name="TanriBen" type="TextureRect" parent="TextureRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -235.0
+margin_right = 290.0
+margin_bottom = 235.0
+expand = true
+stretch_mode = 1
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IlkSaldiri" type="Particles2D" parent="TextureRect/TanriBen"]
+position = Vector2( 201.583, 146.594 )
+emitting = false
+amount = 20
+lifetime = 2.0
+speed_scale = 2.0
+process_material = SubResource( 7 )
+texture = SubResource( 8 )
+
+[node name="TanriRakip" type="TextureRect" parent="TextureRect"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -236.5
+margin_bottom = 236.5
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IkinciSaldiri" type="Particles2D" parent="TextureRect/TanriRakip"]
+position = Vector2( 81.7965, 147.594 )
+emitting = false
+amount = 20
+lifetime = 2.8
+speed_scale = 2.0
+process_material = SubResource( 9 )
+texture = ExtResource( 2 )
+
+[node name="baslik" type="Label" parent="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 149.0
+margin_top = 264.0
+margin_right = -175.0
+margin_bottom = -888.0
+custom_fonts/font = SubResource( 10 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+self_modulate = Color( 0, 0, 0, 0.776471 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -360.0
+margin_top = -292.0
+margin_right = 362.0
+margin_bottom = -12.0
+rect_min_size = Vector2( 0, 280 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = 11.0
+margin_right = -13.0
+margin_bottom = -11.0
+custom_fonts/font = SubResource( 11 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Timer" type="Timer" parent="."]

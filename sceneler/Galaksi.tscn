@@ -1,0 +1,230 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/galaksi_arkaplan.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/nebula_1.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/nebula_2.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/nebula_3.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/nebula_4.webp" type="Texture" id=6]
+[ext_resource path="res://resimler/nebula_5.webp" type="Texture" id=7]
+[ext_resource path="res://sceneler/Galaksi.gd" type="Script" id=8]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+outline_color = Color( 0.945098, 0.521569, 0.027451, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Galaksi" type="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -519.0
+margin_right = 359.0
+margin_bottom = 519.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula1" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula1Isim" type="Label" parent="Nebula1"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -45.0
+margin_right = 128.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula2" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -71.0
+margin_top = -3.0
+margin_right = 376.0
+margin_bottom = 516.0
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula2Isim" type="Label" parent="Nebula2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.5
+margin_top = -35.5
+margin_right = 160.5
+margin_bottom = 54.5
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula3" type="TextureButton" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -161.0
+margin_right = 480.0
+margin_bottom = 386.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula3Isim" type="Label" parent="Nebula3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -0.5
+margin_right = 177.0
+margin_bottom = 89.5
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula4" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -417.0
+margin_top = -154.0
+margin_right = 109.0
+margin_bottom = 396.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula4Isim" type="Label" parent="Nebula4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = -23.0
+margin_right = 179.0
+margin_bottom = 67.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula5" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -340.0
+margin_top = -272.0
+margin_right = 327.0
+margin_bottom = 29.0
+rect_scale = Vector2( 0.9, 0.9 )
+texture_normal = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nebula5Isim" type="Label" parent="Nebula5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -202.5
+margin_top = -27.5
+margin_right = 197.5
+margin_bottom = 62.5
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsePossession" type="TextureButton" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -205.189
+margin_top = -93.1086
+margin_right = -1.18921
+margin_bottom = -32.1086
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_disabled = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="UsePossession"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Use Possesion"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+[connection signal="dive_in" from="." to="." method="_on_Galaksi_dive_in"]
+[connection signal="use_possession" from="." to="." method="_on_Galaksi_use_possession"]
+[connection signal="pressed" from="Nebula1" to="." method="_on_Nebula1_pressed"]
+[connection signal="pressed" from="Nebula2" to="." method="_on_Nebula2_pressed"]
+[connection signal="pressed" from="Nebula3" to="." method="_on_Nebula3_pressed"]
+[connection signal="pressed" from="Nebula4" to="." method="_on_Nebula4_pressed"]
+[connection signal="pressed" from="Nebula5" to="." method="_on_Nebula5_pressed"]
+[connection signal="pressed" from="UsePossession" to="." method="_on_UsePossession_pressed"]

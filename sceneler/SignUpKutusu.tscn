@@ -1,0 +1,205 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/giris_kutu_scroll.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=4]
+[ext_resource path="res://sceneler/SignUpKutusu.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 2
+outline_color = Color( 0.964706, 0.745098, 0.368627, 1 )
+use_filter = true
+extra_spacing_bottom = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/giris_buton_normal.webp-8cbe1a510bdadf0cfeda34002168d431.stex"
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/giris_buton_basili.webp-77c9115789f8ccf7f28b662de63dc9f3.stex"
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="SignUpKutusu" type="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -377.5
+margin_right = 290.0
+margin_bottom = 377.5
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -303.0
+margin_right = 225.0
+margin_bottom = 303.0
+custom_constants/separation = 13
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BaslikMerkezleyici" type="CenterContainer" parent="VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 137.0
+
+[node name="Baslik" type="Label" parent="VBoxContainer/BaslikMerkezleyici"]
+margin_right = 450.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 450, 0 )
+custom_colors/font_color = Color( 0.603922, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Sign Up GaD Account"
+align = 1
+autowrap = true
+
+[node name="EmailText" type="Label" parent="VBoxContainer"]
+margin_top = 150.0
+margin_right = 450.0
+margin_bottom = 186.0
+custom_fonts/font = SubResource( 2 )
+text = "Email:      "
+align = 1
+
+[node name="Email" type="LineEdit" parent="VBoxContainer"]
+margin_top = 199.0
+margin_right = 450.0
+margin_bottom = 245.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+placeholder_text = "example@mail.com"
+caret_blink = true
+
+[node name="SifreText" type="Label" parent="VBoxContainer"]
+margin_top = 258.0
+margin_right = 450.0
+margin_bottom = 294.0
+custom_fonts/font = SubResource( 2 )
+text = "Password:"
+align = 1
+
+[node name="Sifre" type="LineEdit" parent="VBoxContainer"]
+margin_top = 307.0
+margin_right = 450.0
+margin_bottom = 353.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+secret = true
+placeholder_text = "*********"
+caret_blink = true
+
+[node name="SifreTekrarText" type="Label" parent="VBoxContainer"]
+margin_top = 366.0
+margin_right = 450.0
+margin_bottom = 402.0
+custom_fonts/font = SubResource( 2 )
+text = "Retype Password:"
+align = 1
+
+[node name="SifreTekrar" type="LineEdit" parent="VBoxContainer"]
+margin_top = 415.0
+margin_right = 450.0
+margin_bottom = 461.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+secret = true
+placeholder_text = "*********"
+caret_blink = true
+
+[node name="MerkezleyiciButonlar" type="CenterContainer" parent="VBoxContainer"]
+margin_top = 474.0
+margin_right = 450.0
+margin_bottom = 535.0
+
+[node name="UyeOl" type="TextureButton" parent="VBoxContainer/MerkezleyiciButonlar"]
+margin_left = 125.0
+margin_right = 325.0
+margin_bottom = 61.0
+texture_normal = SubResource( 5 )
+texture_pressed = SubResource( 6 )
+
+[node name="Signup" type="Label" parent="VBoxContainer/MerkezleyiciButonlar/UyeOl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -30.5
+margin_right = 100.0
+margin_bottom = 30.5
+custom_fonts/font = SubResource( 7 )
+text = "Sign Up"
+align = 1
+valign = 1
+
+[node name="DikeyBolucuLogolar" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 548.0
+margin_right = 450.0
+margin_bottom = 606.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 10
+
+[node name="GeriButonu" type="TextureButton" parent="VBoxContainer/DikeyBolucuLogolar"]
+margin_right = 50.0
+margin_bottom = 58.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BilgiYazisi" type="Label" parent="VBoxContainer/DikeyBolucuLogolar"]
+margin_left = 60.0
+margin_top = 17.0
+margin_right = 450.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 350, 0 )
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 8 )
+align = 1
+autowrap = true
+
+[connection signal="pressed" from="VBoxContainer/MerkezleyiciButonlar/UyeOl" to="." method="_on_UyeOl_pressed"]
+[connection signal="pressed" from="VBoxContainer/DikeyBolucuLogolar/GeriButonu" to="." method="_on_GeriButonu_pressed"]

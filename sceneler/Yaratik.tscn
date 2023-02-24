@@ -1,0 +1,449 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=1]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=3]
+[ext_resource path="res://sceneler/Yaratik.gd" type="Script" id=4]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/yildizlar/yildiz0.webp" type="Texture" id=6]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=7]
+[ext_resource path="res://resimler/yaratiklar/yaratik_cerceve.webp" type="Texture" id=8]
+[ext_resource path="res://resimler/galaksi_arkaplan_2.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/yaratiklar/yaratik_cerceve_arkaplan.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/gorev_kutusu.webp" type="Texture" id=11]
+[ext_resource path="res://resimler/buton_alt_tiklama.webp" type="Texture" id=12]
+[ext_resource path="res://resimler/button_alt_ana.webp" type="Texture" id=13]
+[ext_resource path="res://resimler/popup_arkaplan_genel.webp" type="Texture" id=14]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=15]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 3
+outline_color = Color( 0.180392, 0.0196078, 0.117647, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 2
+outline_color = Color( 1, 0.513726, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="IcGalaksi" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -519.0
+margin_right = 359.0
+margin_bottom = 519.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 4 )
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Arkaplan"]
+visible = false
+self_modulate = Color( 0, 0, 0, 0.729412 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 79.0
+margin_right = -9.0
+margin_bottom = -11.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = 82.0
+margin_right = -10.0
+margin_bottom = -93.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YildizlarGrid" type="GridContainer" parent="Arkaplan/ScrollContainer"]
+margin_right = 683.0
+margin_bottom = 900.0
+rect_min_size = Vector2( 630, 900 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 15
+custom_constants/hseparation = 15
+columns = 3
+
+[node name="YildizCerceve" type="TextureRect" parent="Arkaplan/ScrollContainer/YildizlarGrid"]
+margin_right = 220.0
+margin_bottom = 310.0
+texture = ExtResource( 8 )
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Arkaplan/ScrollContainer/YildizlarGrid/YildizCerceve"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yildiz" type="TextureButton" parent="Arkaplan/ScrollContainer/YildizlarGrid/YildizCerceve"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = 28.0
+margin_right = -31.0
+margin_bottom = -31.0
+texture_normal = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ismi" type="Label" parent="Arkaplan/ScrollContainer/YildizlarGrid/YildizCerceve/Yildiz"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan"]
+self_modulate = Color( 0, 0, 0, 0.501961 )
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 13.0
+margin_right = -10.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yaratiklar" type="TextureButton" parent="Arkaplan"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.0
+margin_top = 15.0
+margin_right = -13.0
+margin_bottom = 65.0
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yaratiklar" type="Label" parent="Arkaplan/Yaratiklar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Creatures"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yildizlar" type="TextureButton" parent="Arkaplan"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -261.0
+margin_top = 15.0
+margin_right = -141.0
+margin_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yildizlar" type="Label" parent="Arkaplan/Yildizlar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Stars"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GalaksiIsmi" type="Label" parent="Arkaplan"]
+margin_left = 70.0
+margin_top = 16.0
+margin_right = 455.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TextureButton" type="TextureButton" parent="Arkaplan"]
+margin_left = 13.4847
+margin_top = 15.0
+margin_right = 63.4847
+margin_bottom = 65.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Arkaplan"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = -85.0
+margin_right = -11.0
+margin_bottom = -6.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label" type="Label" parent="Arkaplan/TextureRect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 57.0
+margin_top = -29.0
+margin_right = 472.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+text = "Remaining  Banish Monsters Count :"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SavasHakki" type="Label" parent="Arkaplan/TextureRect/label"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 19.0
+margin_top = -18.5
+margin_right = 30.0
+margin_bottom = 18.5
+custom_colors/font_color = Color( 1, 0.0470588, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Arkaplan/TextureRect"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -364.0
+margin_top = -550.0
+margin_right = -18.0
+margin_bottom = -2.0
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan/TextureRect/TextureRect2"]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 39.0
+margin_right = -6.0
+margin_bottom = -7.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Arkaplan/TextureRect/TextureRect2/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan/TextureRect/TextureRect2/ColorRect/MarginContainer"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 322.0
+margin_bottom = 492.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/TextureRect/TextureRect2/ColorRect/MarginContainer/ScrollContainer"]
+margin_right = 312.0
+margin_bottom = 482.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GecmisLabel" type="Label" parent="Arkaplan/TextureRect/TextureRect2/ColorRect/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_right = 312.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="Arkaplan/TextureRect/TextureRect2"]
+margin_left = 14.0
+margin_top = 11.0
+margin_right = 92.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 8 )
+text = "Creature History"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clear" type="TextureButton" parent="Arkaplan/TextureRect/TextureRect2"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -147.0
+margin_top = 8.0
+margin_right = -47.0
+margin_bottom = 38.0
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 12 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Arkaplan/TextureRect/TextureRect2/Clear"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 9 )
+text = "Clear"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsePossession" type="TextureButton" parent="Arkaplan"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = -151.0
+margin_right = 210.0
+margin_bottom = -90.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_disabled = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Arkaplan/UsePossession"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Use Possesion"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="Arkaplan/Yaratiklar" to="." method="_on_Yaratiklar_pressed"]
+[connection signal="pressed" from="Arkaplan/Yildizlar" to="." method="_on_Yildizlar_pressed"]
+[connection signal="pressed" from="Arkaplan/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Arkaplan/TextureRect/TextureRect2/Clear" to="." method="_on_Clear_pressed"]
+[connection signal="pressed" from="Arkaplan/UsePossession" to="." method="_on_UsePossession_pressed"]

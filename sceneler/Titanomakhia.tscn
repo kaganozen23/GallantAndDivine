@@ -1,0 +1,872 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/journey_arkaplan.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/buton_alt_tiklama.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/info_buton.webp" type="Texture" id=6]
+[ext_resource path="res://resimler/bar_agac_kabugu_alt.webp" type="Texture" id=7]
+[ext_resource path="res://resimler/button_alt_ana.webp" type="Texture" id=8]
+[ext_resource path="res://resimler/bar_agac_kabugu_ust.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/yenile_buton.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/gorev_kutusu.webp" type="Texture" id=11]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=12]
+[ext_resource path="res://sceneler/Titanomakhia.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+outline_color = Color( 0.996078, 0.00784314, 0.00784314, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 26
+outline_size = 1
+outline_color = Color( 0.231373, 0.0862745, 0.741176, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+outline_size = 1
+outline_color = Color( 0.231373, 0.0862745, 0.741176, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 27
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Ana" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 13 )
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 22.0
+margin_top = 28.0
+margin_right = -25.0001
+margin_bottom = -13.0
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="Arkaplan/VBoxContainer"]
+margin_right = 720.0
+margin_bottom = 49.0
+custom_fonts/font = SubResource( 1 )
+text = "Titanomahia"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Arkaplan/VBoxContainer"]
+margin_top = 54.0
+margin_right = 720.0
+margin_bottom = 830.0
+rect_min_size = Vector2( 0, 520 )
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan/VBoxContainer/HBoxContainer"]
+self_modulate = Color( 0, 0, 0, 0.45098 )
+margin_right = 350.0
+margin_bottom = 776.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 19.0
+margin_bottom = -21.0
+size_flags_horizontal = 3
+custom_constants/separation = 10
+alignment = 1
+
+[node name="TanriIsmi" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+margin_top = 98.0
+margin_right = 350.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+
+[node name="OyuncuIsmi" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+margin_top = 138.0
+margin_right = 350.0
+margin_bottom = 168.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+autowrap = true
+
+[node name="ToplamGuc" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+margin_top = 178.0
+margin_right = 350.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+autowrap = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2"]
+margin_top = 218.0
+margin_right = 350.0
+margin_bottom = 638.0
+
+[node name="TanriResmi" type="TextureRect" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2/CenterContainer"]
+margin_left = 50.0
+margin_right = 300.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 250, 420 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+stretch_mode = 1
+flip_h = true
+
+[node name="Bilgi" type="TextureButton" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2/CenterContainer/TanriResmi"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -50.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 6 )
+
+[node name="ColorRect2" type="ColorRect" parent="Arkaplan/VBoxContainer/HBoxContainer"]
+self_modulate = Color( 0, 0, 0, 0.45098 )
+margin_left = 370.0
+margin_right = 720.0
+margin_bottom = 776.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 19.0
+margin_bottom = -21.0
+size_flags_horizontal = 3
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RakipTanriIsmi" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer"]
+margin_right = 350.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+
+[node name="RakipOyuncuIsmi" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer"]
+margin_top = 40.0
+margin_right = 350.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+autowrap = true
+
+[node name="ToplamGuc2" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer"]
+margin_top = 80.0
+margin_right = 350.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+autowrap = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer"]
+margin_top = 120.0
+margin_right = 350.0
+margin_bottom = 736.0
+size_flags_vertical = 3
+
+[node name="RakipTanriResmi" type="TextureRect" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/CenterContainer"]
+margin_left = 50.0
+margin_top = 98.0
+margin_right = 300.0
+margin_bottom = 518.0
+rect_min_size = Vector2( 250, 420 )
+expand = true
+stretch_mode = 1
+
+[node name="Yenile" type="TextureButton" parent="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/CenterContainer/RakipTanriResmi"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -50.0
+margin_bottom = 50.0
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan/VBoxContainer"]
+self_modulate = Color( 0, 0, 0, 0.45098 )
+margin_top = 835.0
+margin_right = 720.0
+margin_bottom = 1165.0
+rect_min_size = Vector2( 0, 330 )
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -255.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Kendi" type="HBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer"]
+margin_right = 350.0
+margin_bottom = 331.0
+size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="Labeller" type="VBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi"]
+margin_right = 127.0
+margin_bottom = 331.0
+custom_constants/separation = 5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_right = 127.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 3 )
+text = "Warfare
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_top = 56.0
+margin_right = 127.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 3 )
+text = "Calamity 
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label3" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_top = 112.0
+margin_right = 127.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 3 )
+text = "Chaos 
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label4" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_top = 168.0
+margin_right = 127.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 3 )
+text = "Fortune
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label5" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_top = 224.0
+margin_right = 127.0
+margin_bottom = 275.0
+custom_fonts/font = SubResource( 3 )
+text = "Divine
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label6" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Labeller"]
+margin_top = 280.0
+margin_right = 127.0
+margin_bottom = 331.0
+custom_fonts/font = SubResource( 3 )
+text = "Renaissance
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Barlar" type="VBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi"]
+margin_left = 147.0
+margin_right = 350.0
+margin_bottom = 331.0
+size_flags_horizontal = 3
+custom_constants/separation = 4
+
+[node name="WarfareBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_right = 203.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="WarfareText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/WarfareBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CalamityBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_top = 54.0
+margin_right = 203.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CalamityText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/CalamityBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ChaosBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_top = 108.0
+margin_right = 203.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ChaosText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/ChaosBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="FortuneBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_top = 162.0
+margin_right = 203.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="FortuneText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/FortuneBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="DivineBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_top = 216.0
+margin_right = 203.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="DivineText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/DivineBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="RenaissanceBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar"]
+margin_top = 270.0
+margin_right = 203.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RenaissanceText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Kendi/Barlar/RenaissanceBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Rakip" type="HBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer"]
+margin_left = 370.0
+margin_right = 720.0
+margin_bottom = 331.0
+size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="Labeller2" type="VBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip"]
+margin_right = 127.0
+margin_bottom = 331.0
+custom_constants/separation = 5
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_right = 127.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 3 )
+text = "Warfare
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label2" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_top = 56.0
+margin_right = 127.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 3 )
+text = "Calamity 
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label3" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_top = 112.0
+margin_right = 127.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 3 )
+text = "Chaos 
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label4" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_top = 168.0
+margin_right = 127.0
+margin_bottom = 219.0
+custom_fonts/font = SubResource( 3 )
+text = "Fortune
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label5" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_top = 224.0
+margin_right = 127.0
+margin_bottom = 275.0
+custom_fonts/font = SubResource( 3 )
+text = "Divine
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label6" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Labeller2"]
+margin_top = 280.0
+margin_right = 127.0
+margin_bottom = 331.0
+custom_fonts/font = SubResource( 3 )
+text = "Renaissance
+Power"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Barlar" type="VBoxContainer" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip"]
+margin_left = 147.0
+margin_right = 350.0
+margin_bottom = 331.0
+size_flags_horizontal = 3
+custom_constants/separation = 4
+
+[node name="WarfareBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_right = 203.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="WarfareText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/WarfareBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="CalamityBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_top = 54.0
+margin_right = 203.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CalamityText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/CalamityBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="ChaosBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_top = 108.0
+margin_right = 203.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ChaosText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/ChaosBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="FortuneBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_top = 162.0
+margin_right = 203.0
+margin_bottom = 212.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="FortuneText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/FortuneBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="DivineBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_top = 216.0
+margin_right = 203.0
+margin_bottom = 266.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="DivineText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/DivineBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="RenaissanceBar" type="TextureProgress" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar"]
+margin_top = 270.0
+margin_right = 203.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 0, 50 )
+max_value = 32000.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RenaissanceText" type="Label" parent="Arkaplan/VBoxContainer/ColorRect/HBoxContainer/Rakip/Barlar/RenaissanceBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Arkaplan/VBoxContainer"]
+margin_top = 1170.0
+margin_right = 720.0
+margin_bottom = 1240.0
+rect_min_size = Vector2( 0, 70 )
+custom_constants/separation = 50
+
+[node name="EsyaKullan" type="TextureButton" parent="Arkaplan/VBoxContainer/HBoxContainer2"]
+margin_right = 335.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer2/EsyaKullan"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -92.5
+margin_top = -16.0
+margin_right = 92.5
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 5 )
+text = "Use Possesion"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Saldir" type="TextureButton" parent="Arkaplan/VBoxContainer/HBoxContainer2"]
+margin_left = 385.0
+margin_right = 720.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+texture_disabled = ExtResource( 12 )
+expand = true
+
+[node name="Label2" type="Label" parent="Arkaplan/VBoxContainer/HBoxContainer2/Saldir"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.5
+margin_top = -16.0
+margin_right = 90.5
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 6 )
+text = "DARE FIGHT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Arkaplan/VBoxContainer"]
+margin_top = 1245.0
+margin_right = 720.0
+margin_bottom = 1325.0
+rect_min_size = Vector2( 0, 80 )
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Arkaplan/VBoxContainer/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -252.5
+margin_top = -33.0
+margin_right = 196.5
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 7 )
+text = "Remaining  Titanomahia Count :"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Kalan" type="Label" parent="Arkaplan/VBoxContainer/TextureRect/Label"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -22.5
+margin_right = 27.0
+margin_bottom = 14.5
+custom_colors/font_color = Color( 1, 0.0470588, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="History" type="TextureButton" parent="Arkaplan/VBoxContainer/TextureRect"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -187.0
+margin_top = -25.5
+margin_right = -17.0
+margin_bottom = 25.5
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Arkaplan/VBoxContainer/TextureRect/History"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = -25.5
+margin_right = 85.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 9 )
+text = "History"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[connection signal="onay" from="." to="." method="_on_Ana_onay"]
+[connection signal="pressed" from="Arkaplan/VBoxContainer/HBoxContainer/ColorRect/VBoxContainer2/CenterContainer/TanriResmi/Bilgi" to="." method="_on_Bilgi_pressed"]
+[connection signal="pressed" from="Arkaplan/VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/CenterContainer/RakipTanriResmi/Yenile" to="." method="_on_Yenile_pressed"]
+[connection signal="pressed" from="Arkaplan/VBoxContainer/HBoxContainer2/EsyaKullan" to="." method="_on_EsyaKullan_pressed"]
+[connection signal="pressed" from="Arkaplan/VBoxContainer/HBoxContainer2/Saldir" to="." method="_on_Saldir_pressed"]

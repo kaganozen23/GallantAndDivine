@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sceneler/tali_sahneler/Dogulama.gd" type="Script" id=2]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/giris_buton_normal.webp-8cbe1a510bdadf0cfeda34002168d431.stex"
+
+[sub_resource type="StreamTexture" id=6]
+flags = 4
+load_path = "res://.import/giris_buton_basili.webp-77c9115789f8ccf7f28b662de63dc9f3.stex"
+
+[node name="Dogrulama" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color( 0, 0, 0, 0.843137 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -250.0
+margin_right = 300.0
+margin_bottom = 250.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Metin" type="Label" parent="ColorRect/VBoxContainer"]
+margin_top = 130.0
+margin_right = 600.0
+margin_bottom = 166.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "Please Enter Your Auth Code Below"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextEdit" type="LineEdit" parent="ColorRect/VBoxContainer"]
+margin_top = 186.0
+margin_right = 600.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+align = 1
+placeholder_text = "Auth Code"
+caret_blink = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/VBoxContainer"]
+margin_top = 252.0
+margin_right = 600.0
+margin_bottom = 313.0
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect/VBoxContainer/CenterContainer"]
+margin_left = 200.0
+margin_right = 400.0
+margin_bottom = 61.0
+texture_normal = SubResource( 5 )
+texture_pressed = SubResource( 6 )
+texture_disabled = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Submit" type="Label" parent="ColorRect/VBoxContainer/CenterContainer/TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "Submşit"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ikaz" type="Label" parent="ColorRect/VBoxContainer"]
+margin_top = 333.0
+margin_right = 600.0
+margin_bottom = 369.0
+rect_min_size = Vector2( 300, 0 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/CenterContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,221 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://resimler/yildizlar/yildiz0.webp" type="Texture" id=1]
+[ext_resource path="res://resimler/galaksi_arkaplan_2.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=4]
+[ext_resource path="res://sceneler/IcGalaksi.gd" type="Script" id=5]
+[ext_resource path="res://resimler/yildizlar/yildiz_halka.webp" type="Texture" id=6]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=8]
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=9]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 3
+outline_color = Color( 0.180392, 0.0196078, 0.117647, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 2
+outline_color = Color( 1, 0.513726, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[node name="IcGalaksi" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -519.0
+margin_right = 359.0
+margin_bottom = 519.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 5 )
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.0
+margin_top = 82.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YildizlarGrid" type="GridContainer" parent="Arkaplan/ScrollContainer"]
+margin_right = 695.0
+margin_bottom = 946.0
+rect_min_size = Vector2( 630, 900 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 55
+custom_constants/hseparation = 50
+columns = 3
+
+[node name="Halka" type="TextureRect" parent="Arkaplan/ScrollContainer/YildizlarGrid"]
+margin_right = 231.0
+margin_bottom = 946.0
+rect_min_size = Vector2( 120, 120 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yildiz" type="TextureButton" parent="Arkaplan/ScrollContainer/YildizlarGrid/Halka"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture_normal = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmirResmi" type="TextureRect" parent="Arkaplan/ScrollContainer/YildizlarGrid/Halka/Yildiz"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -70.0
+margin_right = 70.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 140, 140 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ismi" type="Label" parent="Arkaplan/ScrollContainer/YildizlarGrid/Halka/Yildiz"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan"]
+self_modulate = Color( 0, 0, 0, 0.501961 )
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 13.0
+margin_right = -10.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yaratiklar" type="TextureButton" parent="Arkaplan"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -133.0
+margin_top = 15.0
+margin_right = -13.0
+margin_bottom = 65.0
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yaratiklar" type="Label" parent="Arkaplan/Yaratiklar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Creatures"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yildizlar" type="TextureButton" parent="Arkaplan"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -261.0
+margin_top = 15.0
+margin_right = -141.0
+margin_bottom = 65.0
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+expand = true
+
+[node name="Yildizlar" type="Label" parent="Arkaplan/Yildizlar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Stars"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GalaksiIsmi" type="Label" parent="Arkaplan"]
+margin_left = 70.0
+margin_top = 16.0
+margin_right = 455.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TextureButton" type="TextureButton" parent="Arkaplan"]
+margin_left = 13.4847
+margin_top = 15.0
+margin_right = 63.4847
+margin_bottom = 65.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Arkaplan/Yaratiklar" to="." method="_on_Yaratiklar_pressed"]
+[connection signal="pressed" from="Arkaplan/Yildizlar" to="." method="_on_Yildizlar_pressed"]
+[connection signal="pressed" from="Arkaplan/TextureButton" to="." method="_on_TextureButton_pressed"]

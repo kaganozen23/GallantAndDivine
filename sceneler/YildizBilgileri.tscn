@@ -1,0 +1,1012 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/galaksi_arkaplan_2.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/popup_arkaplan_genel.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/gorev_asama_bar_progress.webp" type="Texture" id=6]
+[ext_resource path="res://sceneler/YildizBilgileri.gd" type="Script" id=7]
+[ext_resource path="res://resimler/gorev_asama_bar_alt.webp" type="Texture" id=8]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/AnaArkaplan.webp" type="Texture" id=11]
+[ext_resource path="res://resimler/buton_alt_tiklama.webp" type="Texture" id=12]
+[ext_resource path="res://resimler/button_alt_ana.webp" type="Texture" id=13]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=14]
+[ext_resource path="res://resimler/emir_resimleri/Proliferate.webp" type="Texture" id=15]
+[ext_resource path="res://resimler/emir_resimleri/War.webp" type="Texture" id=16]
+[ext_resource path="res://resimler/emir_resimleri/Order.webp" type="Texture" id=17]
+[ext_resource path="res://resimler/emir_resimleri/Invocation.webp" type="Texture" id=18]
+[ext_resource path="res://resimler/emir_resimleri/Epidemic.webp" type="Texture" id=19]
+[ext_resource path="res://resimler/emir_resimleri/Crisis.webp" type="Texture" id=20]
+[ext_resource path="res://resimler/emir_resimleri/Sorcery.webp" type="Texture" id=21]
+[ext_resource path="res://resimler/emir_resimleri/Renaissance.webp" type="Texture" id=22]
+[ext_resource path="res://resimler/emir_resimleri/Agriculture.webp" type="Texture" id=23]
+[ext_resource path="res://resimler/emir_resimleri/Calamity.webp" type="Texture" id=24]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=25]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 2
+outline_color = Color( 1, 0.513726, 0, 1 )
+use_filter = true
+extra_spacing_bottom = 3
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 22
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 22
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 21
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 23
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 15
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 18
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 18
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="YildizBilgileri" type="Control"]
+anchor_top = 0.120059
+anchor_right = 0.934896
+anchor_bottom = 0.879941
+margin_right = 10.9999
+margin_bottom = 70.0012
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan"]
+self_modulate = Color( 0, 0, 0, 0.501961 )
+anchor_right = 1.0
+margin_left = 10.0
+margin_top = 13.0
+margin_right = -10.0001
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="GeriButon" type="TextureButton" parent="Arkaplan"]
+margin_left = 13.0
+margin_top = 15.0
+margin_right = 69.5998
+margin_bottom = 62.4726
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GalaksiIsmi" type="Label" parent="Arkaplan"]
+margin_left = 70.0
+margin_top = 16.0
+margin_right = 455.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="YildizIsmi" type="Label" parent="Arkaplan"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -218.0
+margin_top = 15.0
+margin_right = -55.0001
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="HboxContainer" type="HBoxContainer" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = 92.0
+margin_right = -19.0001
+margin_bottom = -445.999
+custom_constants/separation = 37
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BilgiPanosu" type="TextureRect" parent="Arkaplan/HboxContainer"]
+margin_right = 325.0
+margin_bottom = 570.0
+rect_min_size = Vector2( 225, 500 )
+size_flags_horizontal = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/HboxContainer/BilgiPanosu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -44.0
+margin_top = 10.0
+margin_right = 44.0
+margin_bottom = 98.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/HboxContainer/BilgiPanosu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 89.0
+margin_right = -10.0
+margin_bottom = -40.0
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Populasyon" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_right = 305.0
+margin_bottom = 59.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Population:
+"
+align = 1
+valign = 1
+
+[node name="Refah" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 59.0
+margin_right = 305.0
+margin_bottom = 118.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Welfare:
+"
+align = 1
+valign = 1
+
+[node name="Bilim" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 118.0
+margin_right = 305.0
+margin_bottom = 177.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Science:
+"
+align = 1
+valign = 1
+
+[node name="Inanc" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 177.0
+margin_right = 305.0
+margin_bottom = 236.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Faith:
+"
+align = 1
+valign = 1
+
+[node name="Kaynak" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 236.0
+margin_right = 305.0
+margin_bottom = 295.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Resource:
+"
+align = 1
+valign = 1
+
+[node name="Iyilik" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 295.0
+margin_right = 305.0
+margin_bottom = 354.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Goodness:
+"
+align = 1
+valign = 1
+
+[node name="TextureProgress3" type="TextureProgress" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Iyilik"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -125.0
+margin_top = -30.0
+margin_right = 125.0
+rect_min_size = Vector2( 250, 0 )
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 6 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IyilikText" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Iyilik/TextureProgress3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -11.0
+margin_right = 30.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 3 )
+text = "0 / 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Uzaylilik" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 354.0
+margin_right = 305.0
+margin_bottom = 413.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Alienness:
+"
+align = 1
+valign = 1
+
+[node name="TextureProgress2" type="TextureProgress" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Uzaylilik"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -125.0
+margin_top = -30.0
+margin_right = 125.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 6 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UzaylikikText" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Uzaylilik/TextureProgress2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -11.0
+margin_right = 30.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 3 )
+text = "0 / 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cazibe" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer"]
+margin_top = 413.0
+margin_right = 305.0
+margin_bottom = 472.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Your Charm:
+"
+align = 1
+valign = 1
+
+[node name="TextureProgress" type="TextureProgress" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Cazibe"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -125.0
+margin_top = -30.0
+margin_right = 125.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 6 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CazibeText" type="Label" parent="Arkaplan/HboxContainer/BilgiPanosu/VBoxContainer/Cazibe/TextureProgress"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -11.0
+margin_right = 30.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 3 )
+text = "0 / 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmirPanosu" type="TextureRect" parent="Arkaplan/HboxContainer"]
+margin_left = 362.0
+margin_right = 688.0
+margin_bottom = 570.0
+rect_min_size = Vector2( 225, 500 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="VScrollBar" type="ScrollContainer" parent="Arkaplan/HboxContainer/EmirPanosu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 11.0
+margin_right = -10.0
+margin_bottom = -10.0
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar"]
+margin_right = 294.0
+margin_bottom = 715.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FelaketEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_right = 294.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/FelaketEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Calamity"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/FelaketEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -20.0
+margin_right = 40.0
+margin_bottom = 20.0
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SavasEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 65.0
+margin_right = 294.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/SavasEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree War"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/SavasEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HastalikEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 130.0
+margin_right = 294.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/HastalikEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Epidemic"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/HastalikEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -20.0
+margin_right = 40.0
+margin_bottom = 20.0
+texture = ExtResource( 19 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KrizEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 195.0
+margin_right = 294.0
+margin_bottom = 260.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/KrizEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Crisis"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/KrizEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyuculukEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 260.0
+margin_right = 294.0
+margin_bottom = 325.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/BuyuculukEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Sorcery"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/BuyuculukEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 21 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UremeEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 325.0
+margin_right = 294.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/UremeEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+text = "Decree Proliferate"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/UremeEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TarimEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 390.0
+margin_right = 294.0
+margin_bottom = 455.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/TarimEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Decree AgriCulture"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/TarimEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 23 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirlikEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 455.0
+margin_right = 294.0
+margin_bottom = 520.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/DirlikEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Order"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/DirlikEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RonesansEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 520.0
+margin_right = 294.0
+margin_bottom = 585.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/RonesansEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "Decree Renaissance"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/RonesansEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -22.5
+margin_right = 45.0
+margin_bottom = 22.5
+texture = ExtResource( 22 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DuaEmri" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 585.0
+margin_right = 294.0
+margin_bottom = 650.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_disabled = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/DuaEmri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Decree Invocation"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect10" type="TextureRect" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/DuaEmri"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -22.5
+margin_right = 45.0
+margin_bottom = 22.5
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EsyaKullan" type="TextureButton" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer"]
+margin_top = 650.0
+margin_right = 294.0
+margin_bottom = 715.0
+rect_min_size = Vector2( 0, 65 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+expand = true
+
+[node name="EsyaKullan" type="Label" parent="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/EsyaKullan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 4 )
+text = "Use Posession"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DurumKutusu" type="TextureRect" parent="Arkaplan"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -338.5
+margin_top = -431.0
+margin_right = 338.5
+margin_bottom = -20.0
+texture = ExtResource( 11 )
+expand = true
+flip_v = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Arkaplan/DurumKutusu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = 15.0
+margin_right = -22.0
+margin_bottom = -14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan/DurumKutusu/HBoxContainer"]
+margin_right = 208.0
+margin_bottom = 382.0
+size_flags_horizontal = 3
+color = Color( 0.372549, 0.415686, 0.141176, 0.392157 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_constants/separation = 9
+
+[node name="Label" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_right = 208.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 8 )
+text = "Your Recent 
+Decrees"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_top = 68.0
+margin_right = 208.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 70 )
+script = ExtResource( 25 )
+
+[node name="EmirIsmi" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer/ScrollContainer"]
+margin_top = 21.0
+margin_right = 208.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.988235, 0.12549, 0.12549, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "None"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_top = 147.0
+margin_right = 208.0
+margin_bottom = 206.0
+custom_fonts/font = SubResource( 8 )
+text = "Your Remaining
+Decree Count"
+align = 1
+valign = 1
+
+[node name="EmirSayisi" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_top = 215.0
+margin_right = 208.0
+margin_bottom = 243.0
+custom_colors/font_color = Color( 0.988235, 0.12549, 0.12549, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_top = 252.0
+margin_right = 208.0
+margin_bottom = 342.0
+custom_fonts/font = SubResource( 8 )
+text = "Total Decree 
+Count
+(Sielulintu)"
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect/VBoxContainer"]
+margin_top = 351.0
+margin_right = 208.0
+margin_bottom = 379.0
+custom_colors/font_color = Color( 0.988235, 0.12549, 0.12549, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Arkaplan/DurumKutusu/HBoxContainer"]
+margin_left = 212.0
+margin_right = 421.0
+margin_bottom = 382.0
+size_flags_horizontal = 3
+color = Color( 0.372549, 0.415686, 0.141176, 0.392157 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect2/VBoxContainer2"]
+margin_right = 209.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 8 )
+text = "Other God's
+Decrees
+(Manaf's Sphere)"
+align = 1
+valign = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect2/VBoxContainer2"]
+margin_top = 99.0
+margin_right = 209.0
+margin_bottom = 382.0
+size_flags_vertical = 3
+script = ExtResource( 25 )
+
+[node name="ManafinKuresi" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect2/VBoxContainer2/ScrollContainer"]
+margin_right = 209.0
+margin_bottom = 18.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ColorRect3" type="ColorRect" parent="Arkaplan/DurumKutusu/HBoxContainer"]
+margin_left = 425.0
+margin_right = 634.0
+margin_bottom = 382.0
+size_flags_horizontal = 3
+color = Color( 0.372549, 0.415686, 0.141176, 0.392157 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_constants/separation = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2"]
+margin_right = 210.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 8 )
+text = "Your History"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2"]
+margin_top = 37.0
+margin_right = 210.0
+margin_bottom = 323.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 10
+custom_constants/margin_left = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2/MarginContainer"]
+margin_left = 10.0
+margin_right = 200.0
+margin_bottom = 286.0
+rect_min_size = Vector2( 190, 190 )
+scroll_horizontal_enabled = false
+script = ExtResource( 25 )
+
+[node name="Gecmis" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2/MarginContainer/ScrollContainer"]
+margin_right = 190.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 10 )
+valign = 1
+autowrap = true
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2"]
+margin_top = 332.0
+margin_right = 210.0
+margin_bottom = 382.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GecmisTemizle" type="TextureButton" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2/CenterContainer"]
+margin_left = 20.0
+margin_right = 190.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2/CenterContainer/GecmisTemizle"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 11 )
+text = "Clear History"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Arkaplan/GeriButon" to="." method="_on_GeriButon_pressed"]
+[connection signal="pressed" from="Arkaplan/HboxContainer/EmirPanosu/VScrollBar/VBoxContainer/EsyaKullan" to="." method="_on_EsyaKullan_pressed"]
+[connection signal="pressed" from="Arkaplan/DurumKutusu/HBoxContainer/ColorRect3/VBoxContainer2/CenterContainer/GecmisTemizle" to="." method="_on_GecmisTemizle_pressed"]

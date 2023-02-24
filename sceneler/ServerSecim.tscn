@@ -1,0 +1,161 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/giris_kutu_scroll.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/gorev_kutusu.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/server_acik.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/journey_arkaplan.webp" type="Texture" id=5]
+[ext_resource path="res://sceneler/ServerSecim.gd" type="Script" id=6]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=7]
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=8]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 2
+outline_color = Color( 0.964706, 0.745098, 0.368627, 1 )
+use_filter = true
+extra_spacing_bottom = 6
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Arkaplan" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.8316
+margin_top = -2.83167
+margin_right = 2.8316
+margin_bottom = -2.83167
+texture = ExtResource( 5 )
+expand = true
+script = ExtResource( 6 )
+
+[node name="ServerSecimKutusu" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -354.0
+margin_top = -653.0
+margin_right = 354.0
+margin_bottom = 653.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BaslikMerkezleyici" type="CenterContainer" parent="ServerSecimKutusu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -217.5
+margin_top = 120.0
+margin_right = 217.5
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="ServerSecimKutusu/BaslikMerkezleyici"]
+margin_left = 7.0
+margin_right = 428.0
+margin_bottom = 67.0
+custom_colors/font_color = Color( 0.603922, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Choose Universe"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ServerSecimKutusu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -300.0
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 1082.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ServerSecimKutusu/ScrollContainer"]
+margin_right = 600.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+
+[node name="Server" type="TextureButton" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer"]
+margin_right = 284.0
+margin_bottom = 72.0
+custom_constants/separation = -1
+
+[node name="adi" type="Label" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer/VBoxContainer"]
+margin_right = 284.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 2 )
+text = "Server Name"
+align = 1
+
+[node name="hikayesi" type="Label" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer/VBoxContainer"]
+margin_top = 35.0
+margin_right = 284.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "Server Description"
+align = 1
+
+[node name="tanrisi" type="Label" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer"]
+margin_left = 288.0
+margin_top = 18.0
+margin_right = 522.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "(-)"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer"]
+margin_left = 526.0
+margin_right = 576.0
+margin_bottom = 72.0
+
+[node name="ServerDurumu" type="TextureRect" parent="ServerSecimKutusu/ScrollContainer/VBoxContainer/Server/HBoxContainer/CenterContainer"]
+margin_top = 11.0
+margin_right = 50.0
+margin_bottom = 61.0
+texture = ExtResource( 4 )
+
+[node name="GeriButon" type="TextureButton" parent="ServerSecimKutusu"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -90.0
+margin_right = 120.0
+margin_bottom = -20.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="oyuncu_ismi" from="." to="." method="_on_Arkaplan_oyuncu_ismi"]
+[connection signal="pressed" from="ServerSecimKutusu/GeriButon" to="." method="_on_GeriButon_pressed"]

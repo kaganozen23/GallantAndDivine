@@ -1,0 +1,646 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/galaksi_arkaplan_2.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/galaksi_arkaplan.webp" type="Texture" id=3]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=4]
+[ext_resource path="res://resimler/giris_buton_basili.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/giris_buton_normal.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/AnaArkaplan.webp" type="Texture" id=12]
+[ext_resource path="res://resimler/giris_buton_disabled.webp" type="Texture" id=13]
+[ext_resource path="res://resimler/TanriPopup_dondurulmus.webp" type="Texture" id=14]
+[ext_resource path="res://sceneler/Panteon.gd" type="Script" id=15]
+[ext_resource path="res://resimler/find.webp" type="Texture" id=17]
+[ext_resource path="res://resimler/mum.webp" type="Texture" id=19]
+[ext_resource path="res://efektler/dikey_ates.webp" type="Texture" id=20]
+[ext_resource path="res://resimler/mum_tikli.webp" type="Texture" id=21]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0.129412, 0.027451, 0.603922, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 2
+outline_color = Color( 0.129412, 0.027451, 0.603922, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 1
+outline_color = Color( 0.364706, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_size = 1
+outline_color = Color( 0.380392, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 18
+outline_size = 1
+outline_color = Color( 0.505882, 0.54902, 0.811765, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
+outline_size = 1
+outline_color = Color( 0.0745098, 0.0823529, 1, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="CanvasItemMaterial" id=10]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=11]
+lifetime_randomness = 0.16
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3( 0, -15, 0 )
+angular_velocity_random = 0.41
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 4.61
+radial_accel = 9.19
+radial_accel_random = 0.24
+tangential_accel = 2.3
+damping_random = 0.24
+hue_variation_random = 0.48
+
+[sub_resource type="DynamicFont" id=12]
+size = 20
+outline_color = Color( 0.101961, 0.690196, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Panteon" type="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -519.0
+margin_right = 359.0
+margin_bottom = 519.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 15 )
+
+[node name="PanteonSecim" type="VBoxContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="UstPanteonlar" type="HBoxContainer" parent="PanteonSecim"]
+margin_right = 698.0
+margin_bottom = 336.0
+size_flags_vertical = 3
+
+[node name="RomanTexture" type="TextureButton" parent="PanteonSecim/UstPanteonlar"]
+margin_right = 347.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+
+[node name="Metni" type="Label" parent="PanteonSecim/UstPanteonlar/RomanTexture"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -137.0
+margin_top = -36.0
+margin_right = 137.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SumerianTexture" type="TextureButton" parent="PanteonSecim/UstPanteonlar"]
+margin_left = 351.0
+margin_right = 698.0
+margin_bottom = 336.0
+size_flags_horizontal = 3
+
+[node name="Metni" type="Label" parent="PanteonSecim/UstPanteonlar/SumerianTexture"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -137.0
+margin_top = -36.0
+margin_right = 137.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="OrtaPanteon" type="HBoxContainer" parent="PanteonSecim"]
+margin_top = 340.0
+margin_right = 698.0
+margin_bottom = 677.0
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="PanteonSecim/OrtaPanteon"]
+margin_right = 698.0
+margin_bottom = 337.0
+size_flags_horizontal = 3
+
+[node name="EgyptianTexture" type="TextureButton" parent="PanteonSecim/OrtaPanteon/CenterContainer"]
+margin_left = 349.0
+margin_top = 168.0
+margin_right = 349.0
+margin_bottom = 168.0
+
+[node name="Metni" type="Label" parent="PanteonSecim/OrtaPanteon/CenterContainer/EgyptianTexture"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -137.0
+margin_top = -36.0
+margin_right = 137.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AltPanteonlar" type="HBoxContainer" parent="PanteonSecim"]
+margin_top = 681.0
+margin_right = 698.0
+margin_bottom = 1018.0
+size_flags_vertical = 3
+
+[node name="GreekTexture" type="TextureButton" parent="PanteonSecim/AltPanteonlar"]
+margin_right = 347.0
+margin_bottom = 337.0
+size_flags_horizontal = 3
+
+[node name="Metni" type="Label" parent="PanteonSecim/AltPanteonlar/GreekTexture"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -137.0
+margin_top = -36.0
+margin_right = 137.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ScandinavianTexture" type="TextureButton" parent="PanteonSecim/AltPanteonlar"]
+margin_left = 351.0
+margin_right = 698.0
+margin_bottom = 337.0
+size_flags_horizontal = 3
+
+[node name="Metni" type="Label" parent="PanteonSecim/AltPanteonlar/ScandinavianTexture"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -137.0
+margin_top = -36.0
+margin_right = 137.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="YetersizGuc" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Merkezleyici" type="CenterContainer" parent="YetersizGuc"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="YetersizGucMetni" type="Label" parent="YetersizGuc/Merkezleyici"]
+margin_left = 184.0
+margin_top = 364.0
+margin_right = 534.0
+margin_bottom = 673.0
+rect_min_size = Vector2( 350, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "You have to reach required talent points to join Pantheon. Remaining:
+"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AnaPanteon" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+expand = true
+
+[node name="Barlar" type="VBoxContainer" parent="AnaPanteon"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -17.0
+margin_bottom = -20.0
+
+[node name="ColorRect" type="ColorRect" parent="AnaPanteon/Barlar"]
+self_modulate = Color( 0, 0, 0, 0.635294 )
+margin_right = 681.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 0, 160 )
+
+[node name="Ustbar" type="HBoxContainer" parent="AnaPanteon/Barlar/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 160 )
+
+[node name="PanteonResmi" type="TextureRect" parent="AnaPanteon/Barlar/ColorRect/Ustbar"]
+margin_right = 163.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnaPanteon/Barlar/ColorRect/Ustbar"]
+margin_left = 167.0
+margin_right = 681.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 514, 0 )
+
+[node name="PanteonIsmi" type="Label" parent="AnaPanteon/Barlar/ColorRect/Ustbar/VBoxContainer"]
+margin_top = 14.0
+margin_right = 514.0
+margin_bottom = 63.0
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.941176, 0.909804, 0.909804, 1 )
+custom_fonts/font = SubResource( 3 )
+align = 1
+valign = 1
+
+[node name="PanteonBonusu" type="Label" parent="AnaPanteon/Barlar/ColorRect/Ustbar/VBoxContainer"]
+margin_top = 103.0
+margin_right = 514.0
+margin_bottom = 139.0
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0.796078, 0.752941, 0.415686, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ortabar" type="HBoxContainer" parent="AnaPanteon/Barlar"]
+margin_top = 164.0
+margin_right = 681.0
+margin_bottom = 998.0
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="AnaPanteon/Barlar/Ortabar"]
+margin_right = 250.0
+margin_bottom = 834.0
+rect_min_size = Vector2( 250, 0 )
+texture = ExtResource( 14 )
+expand = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 39.0
+margin_right = -22.0
+margin_bottom = -48.0
+
+[node name="CenterContainer" type="CenterContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2"]
+margin_right = 204.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Baslik" type="Label" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/CenterContainer"]
+margin_left = 34.0
+margin_right = 169.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.941176, 0.909804, 0.909804, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Existence"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2"]
+margin_top = 38.0
+margin_right = 204.0
+margin_bottom = 72.0
+
+[node name="TextEdit" type="LineEdit" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/HBoxContainer"]
+margin_right = 165.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 165, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 8 )
+context_menu_enabled = false
+clear_button_enabled = true
+shortcut_keys_enabled = false
+placeholder_text = "Wisher"
+caret_blink = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureButton" type="TextureButton" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/HBoxContainer"]
+margin_left = 169.0
+margin_right = 204.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+texture_normal = ExtResource( 17 )
+expand = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2"]
+margin_top = 76.0
+margin_right = 204.0
+margin_bottom = 747.0
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer"]
+self_modulate = Color( 1, 1, 1, 0.792157 )
+margin_right = 204.0
+margin_bottom = 671.0
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="TanriListesi" type="VBoxContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer/ColorRect/ScrollContainer"]
+margin_right = 194.0
+size_flags_horizontal = 3
+
+[node name="Tanri" type="HBoxContainer" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer/ColorRect/ScrollContainer/TanriListesi"]
+visible = false
+margin_right = 194.0
+margin_bottom = 22.0
+
+[node name="TanriIsmi" type="Label" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer/ColorRect/ScrollContainer/TanriListesi/Tanri"]
+margin_right = 165.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 165, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+clip_text = true
+
+[node name="Online" type="TextureRect" parent="AnaPanteon/Barlar/Ortabar/TextureRect/VBoxContainer2/VBoxContainer/ColorRect/ScrollContainer/TanriListesi/Tanri"]
+margin_left = 169.0
+margin_right = 194.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AnaPanteon/Barlar/Ortabar"]
+margin_left = 254.0
+margin_right = 681.0
+margin_bottom = 834.0
+size_flags_horizontal = 3
+
+[node name="PantheonPower" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer"]
+margin_right = 427.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.941176, 0.909804, 0.909804, 1 )
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer"]
+margin_top = 38.0
+margin_right = 427.0
+margin_bottom = 99.0
+alignment = 1
+
+[node name="Trade" type="TextureButton" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/HBoxContainer"]
+margin_left = 11.0
+margin_right = 211.0
+margin_bottom = 61.0
+disabled = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_disabled = ExtResource( 13 )
+
+[node name="TradeText" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/HBoxContainer/Trade"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Trade"
+align = 1
+valign = 1
+
+[node name="PantheonWar" type="TextureButton" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/HBoxContainer"]
+margin_left = 215.0
+margin_right = 415.0
+margin_bottom = 61.0
+disabled = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_disabled = ExtResource( 13 )
+
+[node name="TradeText2" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/HBoxContainer/PantheonWar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "War"
+align = 1
+valign = 1
+
+[node name="Causerie" type="TextureRect" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer"]
+margin_top = 103.0
+margin_right = 427.0
+margin_bottom = 834.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 14 )
+expand = true
+
+[node name="Ana_Konteyner" type="VBoxContainer" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 34.0
+margin_top = 52.0
+margin_right = -32.0
+margin_bottom = -43.0
+
+[node name="CenterContainer" type="CenterContainer" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner"]
+margin_right = 361.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="GonderKutusu" type="HBoxContainer" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner"]
+margin_top = 19.0
+margin_right = 361.0
+margin_bottom = 149.0
+focus_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu"]
+margin_right = 277.0
+margin_bottom = 130.0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_colors/font_color = Color( 0.745098, 0.827451, 0.0352941, 1 )
+custom_colors/background_color = Color( 0.415686, 0.321569, 0.141176, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Type here!"
+syntax_highlighting = true
+fold_gutter = true
+smooth_scrolling = true
+wrap_enabled = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/TextEdit"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -82.0
+margin_top = -24.0
+custom_fonts/font = SubResource( 13 )
+text = "/250"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Mum1" type="TextureButton" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu"]
+margin_left = 281.0
+margin_right = 361.0
+margin_bottom = 130.0
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 21 )
+
+[node name="Particles2D" type="Particles2D" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/Mum1"]
+show_behind_parent = true
+material = SubResource( 10 )
+position = Vector2( 35.9306, -3.38382 )
+amount = 10
+lifetime = 1.2
+speed_scale = 2.0
+process_material = SubResource( 11 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/Mum1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.26
+margin_top = 97.5417
+margin_right = -9.73999
+margin_bottom = 3.54166
+rect_rotation = -90.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_colors/font_color = Color( 0.745098, 0.827451, 0.0352941, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "OK"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MesajlarKutusu" type="ColorRect" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner"]
+self_modulate = Color( 1, 1, 1, 0.792157 )
+margin_top = 153.0
+margin_right = 361.0
+margin_bottom = 636.0
+focus_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/MesajlarKutusu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+script = ExtResource( 4 )
+
+[node name="Mesajlar" type="Label" parent="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/MesajlarKutusu/ScrollContainer"]
+margin_right = 321.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+autowrap = true
+
+[connection signal="onay" from="." to="." method="_on_Panteon_onay"]
+[connection signal="focus_exited" from="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/TextEdit" to="." method="_on_TextEdit_focus_exited"]
+[connection signal="gui_input" from="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/TextEdit" to="." method="_on_TextEdit_gui_input"]
+[connection signal="text_changed" from="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/TextEdit" to="." method="_on_TextEdit_text_changed"]
+[connection signal="pressed" from="AnaPanteon/Barlar/Ortabar/VBoxContainer/Causerie/Ana_Konteyner/GonderKutusu/Mum1" to="." method="_on_Mum1_pressed"]

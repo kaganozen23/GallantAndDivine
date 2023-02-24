@@ -1,0 +1,214 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://resimler/journey_arkaplan.webp" type="Texture" id=1]
+[ext_resource path="res://sceneler/ScrollContainer.gd" type="Script" id=2]
+[ext_resource path="res://resimler/gorev_kutusu.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/saat.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/gorev_asama_bar_alt.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/gorev_asama_bar_progress.webp" type="Texture" id=6]
+[ext_resource path="res://sceneler/Journey.gd" type="Script" id=9]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = -5
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 1
+outline_color = Color( 0.996078, 0.00784314, 0.00784314, 1 )
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+outline_size = 2
+outline_color = Color( 0.14902, 0.0784314, 0.937255, 1 )
+use_filter = true
+font_data = ExtResource( 11 )
+
+[node name="Journey" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -50.0
+margin_bottom = -328.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+script = ExtResource( 9 )
+
+[node name="JourneyYok" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -233.0
+margin_top = -76.5
+margin_right = 233.0
+margin_bottom = 76.5
+custom_fonts/font = SubResource( 1 )
+text = "There are no available Journey for you at this time!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = 102.0
+margin_right = -22.0
+margin_bottom = -25.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 675.0
+margin_bottom = 911.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer/VBoxContainer"]
+visible = false
+margin_right = 675.0
+margin_bottom = 96.0
+
+[node name="GorevButon" type="TextureButton" parent="ScrollContainer/VBoxContainer/CenterContainer"]
+margin_left = 37.0
+margin_right = 637.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 3 )
+
+[node name="GorevIsmi" type="Label" parent="ScrollContainer/VBoxContainer/CenterContainer/GorevButon"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -15.5
+margin_right = 221.0
+margin_bottom = 15.5
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GorevAsama" type="TextureProgress" parent="ScrollContainer/VBoxContainer/CenterContainer/GorevButon"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -39.0
+margin_top = -15.0
+margin_right = 181.0
+margin_bottom = 15.0
+value = 50.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GorevAsamaYazisi" type="Label" parent="ScrollContainer/VBoxContainer/CenterContainer/GorevButon/GorevAsama"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -21.0
+margin_right = 24.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "2/4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Saat" type="TextureRect" parent="ScrollContainer/VBoxContainer/CenterContainer/GorevButon"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -20.5
+margin_right = -71.0
+margin_bottom = 20.5
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KalanSure" type="Label" parent="ScrollContainer/VBoxContainer/CenterContainer/GorevButon/Saat"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -15.5
+margin_right = 50.0
+margin_bottom = 15.5
+custom_fonts/font = SubResource( 2 )
+text = "20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -152.0
+margin_top = 20.0
+margin_right = 152.0
+margin_bottom = 69.0
+custom_fonts/font = SubResource( 4 )
+text = "Divine Journey"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GorevYokMetin" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -128.5
+margin_right = 125.0
+margin_bottom = 128.5
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 7 )
+text = "You have no divine journeys in here at this time!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}

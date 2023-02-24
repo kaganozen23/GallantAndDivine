@@ -1,0 +1,471 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://resimler/roma_sembol_sade.webp" type="Texture" id=1]
+[ext_resource path="res://resimler/misir_sembol_sade.webp" type="Texture" id=2]
+[ext_resource path="res://resimler/tanri_secim_arkaplan.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/yunan_sembol_sade.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/iskandinav_sembol_secili.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/sumer_sembol_secili.webp" type="Texture" id=6]
+[ext_resource path="res://resimler/iskandinav_sembol_sade.webp" type="Texture" id=7]
+[ext_resource path="res://resimler/misir_sembol_secili.webp" type="Texture" id=8]
+[ext_resource path="res://resimler/roma_sembol_secili.webp.webp" type="Texture" id=9]
+[ext_resource path="res://resimler/sumer_sembol_sade.webp" type="Texture" id=10]
+[ext_resource path="res://resimler/yunan_sembol_secili.webp" type="Texture" id=11]
+[ext_resource path="res://resimler/buton_geri_git_tiklama.webp" type="Texture" id=12]
+[ext_resource path="res://resimler/buton_geri_git.webp" type="Texture" id=13]
+[ext_resource path="res://sceneler/TanriSecim.gd" type="Script" id=14]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://resimler/tanri_secim_kutusu_normal.webp" type="Texture" id=16]
+[ext_resource path="res://resimler/tanrilar/portre/antevorte_portre_130_130.webp" type="Texture" id=17]
+[ext_resource path="res://resimler/tanri_secim_kutusu_secili.webp" type="Texture" id=18]
+[ext_resource path="res://resimler/bar_agac_kabugu_alt.webp" type="Texture" id=19]
+[ext_resource path="res://resimler/bar_agac_kabugu_ust.webp" type="Texture" id=20]
+[ext_resource path="res://resimler/tanrilar/buyuk/antevorte_290_470.webp" type="Texture" id=21]
+[ext_resource path="res://resimler/checkbox.webp" type="Texture" id=22]
+[ext_resource path="res://resimler/tik_45_45.webp" type="Texture" id=23]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+extra_spacing_top = 5
+extra_spacing_bottom = 5
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 25
+extra_spacing_top = -5
+font_data = ExtResource( 15 )
+
+[node name="TanriSecim" type="TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 14 )
+
+[node name="TanriSembolleri" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -355.0
+margin_top = 35.0
+margin_right = 353.0
+margin_bottom = 215.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TanriSembolleri"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_right = 599.0
+margin_bottom = 149.0
+rect_scale = Vector2( 0.53, 0.53 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="TanriSembolleri/VBoxContainer"]
+margin_right = 1304.0
+margin_bottom = 83.0
+custom_fonts/font = SubResource( 1 )
+text = "Choose Your God's Affiliation "
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TanriSembolleri/VBoxContainer"]
+margin_top = 87.0
+margin_right = 1304.0
+margin_bottom = 343.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Roma" type="TextureButton" parent="TanriSembolleri/VBoxContainer/HBoxContainer"]
+margin_right = 256.0
+margin_bottom = 256.0
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sumer" type="TextureButton" parent="TanriSembolleri/VBoxContainer/HBoxContainer"]
+margin_left = 260.0
+margin_right = 516.0
+margin_bottom = 256.0
+toggle_mode = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Misir" type="TextureButton" parent="TanriSembolleri/VBoxContainer/HBoxContainer"]
+margin_left = 520.0
+margin_right = 776.0
+margin_bottom = 256.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Yunan" type="TextureButton" parent="TanriSembolleri/VBoxContainer/HBoxContainer"]
+margin_left = 780.0
+margin_right = 1036.0
+margin_bottom = 256.0
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 11 )
+
+[node name="Iskandinav" type="TextureButton" parent="TanriSembolleri/VBoxContainer/HBoxContainer"]
+margin_left = 1040.0
+margin_right = 1296.0
+margin_bottom = 256.0
+toggle_mode = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 5 )
+
+[node name="TanriGrid" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 26.0
+margin_top = 230.0
+margin_right = -31.0
+margin_bottom = -612.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TanriGridBaslik" type="Label" parent="TanriGrid"]
+anchor_right = 1.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 2 )
+text = "Roman Gods"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="TanriGrid"]
+anchor_right = 1.0
+margin_left = 15.0
+margin_top = 40.0
+margin_right = -15.0
+margin_bottom = 150.0
+custom_constants/vseparation = 9
+custom_constants/hseparation = 23
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tanri" type="TextureButton" parent="TanriGrid/GridContainer"]
+margin_right = 150.0
+margin_bottom = 150.0
+toggle_mode = true
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 18 )
+
+[node name="TanriPortre" type="TextureRect" parent="TanriGrid/GridContainer/Tanri"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.0
+margin_top = -65.0
+margin_right = 65.0
+margin_bottom = 65.0
+texture = ExtResource( 17 )
+
+[node name="TanriBuyuk" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -354.0
+margin_top = -584.0
+margin_right = 354.0
+margin_bottom = -79.0
+color = Color( 0, 0, 0, 0.552941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="TanriBuyuk"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 18.0
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TanriBuyukResim" type="TextureRect" parent="TanriBuyuk/Container"]
+margin_right = 290.0
+margin_bottom = 487.0
+texture = ExtResource( 21 )
+
+[node name="TanriIsmi" type="Label" parent="TanriBuyuk/Container/TanriBuyukResim"]
+anchor_right = 1.0
+margin_top = -20.0
+custom_fonts/font = SubResource( 3 )
+text = "Antevorte"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Labeller" type="VBoxContainer" parent="TanriBuyuk/Container"]
+margin_left = 305.0
+margin_right = 465.0
+margin_bottom = 487.0
+custom_constants/separation = 18
+
+[node name="WarfarePower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_right = 160.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 4 )
+text = "Warfare
+Power"
+
+[node name="CalamityPower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_top = 81.0
+margin_right = 160.0
+margin_bottom = 144.0
+custom_fonts/font = SubResource( 4 )
+text = "Calamity
+ Power"
+
+[node name="ChaosPower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_top = 162.0
+margin_right = 160.0
+margin_bottom = 225.0
+custom_fonts/font = SubResource( 4 )
+text = "Chaos
+Power"
+
+[node name="FortunePower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_top = 243.0
+margin_right = 160.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 4 )
+text = "Fortune
+Power"
+
+[node name="DivinePower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_top = 324.0
+margin_right = 160.0
+margin_bottom = 387.0
+custom_fonts/font = SubResource( 4 )
+text = "Divine
+Power"
+
+[node name="RenaissancePower" type="Label" parent="TanriBuyuk/Container/Labeller"]
+margin_top = 405.0
+margin_right = 160.0
+margin_bottom = 468.0
+custom_fonts/font = SubResource( 4 )
+text = "Renaissance
+Power"
+
+[node name="Barlar" type="VBoxContainer" parent="TanriBuyuk/Container"]
+margin_left = 480.0
+margin_right = 704.0
+margin_bottom = 487.0
+custom_constants/separation = 10
+
+[node name="WarfareBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_right = 224.0
+margin_bottom = 70.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="WarfareBarText" type="Label" parent="TanriBuyuk/Container/Barlar/WarfareBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CalamityBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_top = 80.0
+margin_right = 224.0
+margin_bottom = 150.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="CalamityBarText" type="Label" parent="TanriBuyuk/Container/Barlar/CalamityBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChaosBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_top = 160.0
+margin_right = 224.0
+margin_bottom = 230.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="ChaosBarText" type="Label" parent="TanriBuyuk/Container/Barlar/ChaosBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FortuneBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_top = 240.0
+margin_right = 224.0
+margin_bottom = 310.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="FortuneBarText" type="Label" parent="TanriBuyuk/Container/Barlar/FortuneBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DivineBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_top = 320.0
+margin_right = 224.0
+margin_bottom = 390.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="DivineBarText" type="Label" parent="TanriBuyuk/Container/Barlar/DivineBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RenaissanceBar" type="TextureProgress" parent="TanriBuyuk/Container/Barlar"]
+margin_top = 400.0
+margin_right = 224.0
+margin_bottom = 470.0
+max_value = 1700.0
+texture_under = ExtResource( 19 )
+texture_progress = ExtResource( 20 )
+
+[node name="RenaissanceBarText" type="Label" parent="TanriBuyuk/Container/Barlar/RenaissanceBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GeriButon" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 31.9921
+margin_top = -76.4872
+margin_right = 81.9921
+margin_bottom = -26.4872
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TanriSecim" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -77.0
+margin_right = -30.0
+margin_bottom = -27.0
+texture_normal = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="TanriSecim"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -22.5
+margin_top = -22.5
+margin_right = 22.5
+margin_bottom = 22.5
+rect_scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 23 )
+stretch_mode = 1
+
+[connection signal="pressed" from="TanriSembolleri/VBoxContainer/HBoxContainer/Roma" to="." method="_on_Roma_pressed"]
+[connection signal="pressed" from="TanriSembolleri/VBoxContainer/HBoxContainer/Sumer" to="." method="_on_Sumer_pressed"]
+[connection signal="pressed" from="TanriSembolleri/VBoxContainer/HBoxContainer/Misir" to="." method="_on_Misir_pressed"]
+[connection signal="pressed" from="TanriSembolleri/VBoxContainer/HBoxContainer/Yunan" to="." method="_on_Yunan_pressed"]
+[connection signal="pressed" from="TanriSembolleri/VBoxContainer/HBoxContainer/Iskandinav" to="." method="_on_Iskandinav_pressed"]
+[connection signal="pressed" from="GeriButon" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="TanriSecim" to="." method="_on_TanriSecim_pressed"]

@@ -1,0 +1,192 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://sceneler/PopupOnay.gd" type="Script" id=1]
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://resimler/popup_baslik_kutusu.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/popup_buton_basili.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/popup_metin_kutusu.webp" type="Texture" id=5]
+[ext_resource path="res://resimler/popup_arkaplan_genel.webp" type="Texture" id=6]
+[ext_resource path="res://resimler/popup_buton_normal.webp" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/popup_buton_basili.webp-40ffc906b094c169a6b783b5114de4d9.stex"
+
+[sub_resource type="StreamTexture" id=5]
+flags = 4
+load_path = "res://.import/popup_buton_normal.webp-11ba45d66d50fe476cb886729992bc0c.stex"
+
+[node name="PopupOnay" type="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -367.0
+margin_right = 288.0
+margin_bottom = 367.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -275.0
+margin_top = -224.5
+margin_right = 275.0
+margin_bottom = 224.5
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="TextureRect" parent="Arkaplan"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -266.0
+margin_top = 25.0
+margin_right = 265.0
+margin_bottom = 98.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Baslik" type="Label" parent="Arkaplan/Baslik"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -183.5
+margin_top = 3.0
+margin_right = 183.5
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 1 )
+text = "Unable to Connect"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metin" type="TextureRect" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 83.0
+margin_right = -25.0
+margin_bottom = -25.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Metin" type="Label" parent="Arkaplan/Metin"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 37.0
+margin_top = 67.0
+margin_right = -38.0
+margin_bottom = -89.0
+custom_fonts/font = SubResource( 2 )
+text = "A connection Problem has occured. If you wish to try again please click \"retry\" button."
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EvetButonu" type="TextureButton" parent="Arkaplan/Metin"]
+self_modulate = Color( 0.14902, 0.956863, 0.0352941, 1 )
+anchor_left = 0.982
+anchor_top = 0.996303
+anchor_right = 0.982
+anchor_bottom = 0.996303
+margin_left = -207.0
+margin_top = -67.0
+margin_right = -66.0
+margin_bottom = -17.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Retry" type="Label" parent="Arkaplan/Metin/EvetButonu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.5
+margin_top = -20.5
+margin_right = 103.5
+margin_bottom = 20.5
+custom_fonts/font = SubResource( 3 )
+text = "Retry"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HayirButonu" type="TextureButton" parent="Arkaplan/Metin"]
+self_modulate = Color( 0.94902, 0.027451, 0.027451, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 67.0
+margin_top = -67.0
+margin_right = 208.0
+margin_bottom = -17.0
+texture_normal = SubResource( 4 )
+texture_pressed = SubResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Label" parent="Arkaplan/Metin/HayirButonu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.5
+margin_top = -20.5
+margin_right = 103.5
+margin_bottom = 20.5
+custom_fonts/font = SubResource( 3 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="popup_hide" from="." to="." method="_on_PopupOnay_popup_hide"]
+[connection signal="pressed" from="Arkaplan/Metin/EvetButonu" to="." method="_on_EvetButonu_pressed"]
+[connection signal="pressed" from="Arkaplan/Metin/HayirButonu" to="." method="_on_HayirButonu_pressed"]

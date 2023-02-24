@@ -1,0 +1,496 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://fontlar/youngserif-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://resimler/bar_agac_kabugu_ust.webp" type="Texture" id=3]
+[ext_resource path="res://resimler/bar_agac_kabugu_alt.webp" type="Texture" id=4]
+[ext_resource path="res://resimler/TanriPopup.webp" type="Texture" id=5]
+[ext_resource path="res://sceneler/TanriBilgileri.gd" type="Script" id=6]
+[ext_resource path="res://resimler/offline.webp" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=11]
+size = 22
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 20
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+extra_spacing_top = -5
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 18
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="TanriBilgileri" type="Popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = -286.5
+margin_right = 384.0
+margin_bottom = 286.5
+script = ExtResource( 6 )
+
+[node name="Arkaplan" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = -330.0
+margin_right = 384.0
+margin_bottom = 330.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Container" type="HBoxContainer" parent="Arkaplan"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 49.0
+margin_right = -39.0
+margin_bottom = -47.0
+custom_constants/separation = -30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Arkaplan/Container"]
+margin_right = 246.0
+margin_bottom = 564.0
+size_flags_horizontal = 3
+
+[node name="OyuncuIsmi" type="Label" parent="Arkaplan/Container/VBoxContainer"]
+margin_right = 246.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 11 )
+align = 1
+
+[node name="TanriIsmi" type="Label" parent="Arkaplan/Container/VBoxContainer"]
+margin_top = 31.0
+margin_right = 246.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 11 )
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="PanteonIsmi" type="Label" parent="Arkaplan/Container/VBoxContainer"]
+margin_top = 62.0
+margin_right = 246.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 11 )
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TanriBuyukResim" type="TextureRect" parent="Arkaplan/Container/VBoxContainer"]
+margin_top = 93.0
+margin_right = 246.0
+margin_bottom = 93.0
+
+[node name="Barlar" type="VBoxContainer" parent="Arkaplan/Container"]
+margin_left = 216.0
+margin_right = 440.0
+margin_bottom = 564.0
+custom_constants/separation = 0
+
+[node name="WarfarePower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_right = 224.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 12 )
+text = "Warfare Power"
+align = 1
+
+[node name="WarfareBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 24.0
+margin_right = 224.0
+margin_bottom = 94.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="WarfareBarText" type="Label" parent="Arkaplan/Container/Barlar/WarfareBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="CalamityPower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_top = 94.0
+margin_right = 224.0
+margin_bottom = 118.0
+custom_fonts/font = SubResource( 12 )
+text = "Calamity Power"
+align = 1
+
+[node name="CalamityBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 118.0
+margin_right = 224.0
+margin_bottom = 188.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="CalamityBarText" type="Label" parent="Arkaplan/Container/Barlar/CalamityBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="ChaosPower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_top = 188.0
+margin_right = 224.0
+margin_bottom = 212.0
+custom_fonts/font = SubResource( 12 )
+text = "Chaos Power"
+align = 1
+
+[node name="ChaosBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 212.0
+margin_right = 224.0
+margin_bottom = 282.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="ChaosBarText" type="Label" parent="Arkaplan/Container/Barlar/ChaosBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="FortunePower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_top = 282.0
+margin_right = 224.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 12 )
+text = "Fortune Power"
+align = 1
+
+[node name="FortuneBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 306.0
+margin_right = 224.0
+margin_bottom = 376.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="FortuneBarText" type="Label" parent="Arkaplan/Container/Barlar/FortuneBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DivinePower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_top = 376.0
+margin_right = 224.0
+margin_bottom = 400.0
+custom_fonts/font = SubResource( 12 )
+text = "Divine Power"
+align = 1
+
+[node name="DivineBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 400.0
+margin_right = 224.0
+margin_bottom = 470.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="DivineBarText" type="Label" parent="Arkaplan/Container/Barlar/DivineBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RenaissancePower" type="Label" parent="Arkaplan/Container/Barlar"]
+margin_top = 470.0
+margin_right = 224.0
+margin_bottom = 494.0
+custom_fonts/font = SubResource( 12 )
+text = "Renaissance Power"
+align = 1
+
+[node name="RenaissanceBar" type="TextureProgress" parent="Arkaplan/Container/Barlar"]
+margin_top = 494.0
+margin_right = 224.0
+margin_bottom = 564.0
+max_value = 32000.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="RenaissanceBarText" type="Label" parent="Arkaplan/Container/Barlar/RenaissanceBar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -15.0
+margin_right = 28.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 10 )
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/Container"]
+margin_left = 410.0
+margin_right = 510.0
+margin_bottom = 564.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Arkaplan/Container"]
+margin_left = 480.0
+margin_right = 726.0
+margin_bottom = 564.0
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Arkaplan/Container/VBoxContainer2"]
+margin_right = 246.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 50, 60 )
+
+[node name="ColorRect" type="ColorRect" parent="Arkaplan/Container/VBoxContainer2"]
+self_modulate = Color( 0, 0, 0, 0.733333 )
+margin_top = 64.0
+margin_right = 246.0
+margin_bottom = 503.0
+size_flags_vertical = 3
+
+[node name="Bufflar" type="VBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 9.0
+margin_right = -5.0
+margin_bottom = -6.0
+size_flags_horizontal = 3
+custom_constants/separation = 20
+
+[node name="Baslik" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_right = 235.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 12 )
+text = "Active 
+Empowering"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 71.0
+margin_right = 235.0
+margin_bottom = 93.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Amulet of Tatula"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="AmuletofTatula" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 113.0
+margin_right = 235.0
+margin_bottom = 135.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer2"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Schrimnirs Beef"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SchrimnirsBeef" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer2"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 155.0
+margin_right = 235.0
+margin_bottom = 177.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer3"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Schrimnirs Milk"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="SchrimnirsMilk" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer3"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 197.0
+margin_right = 235.0
+margin_bottom = 219.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer4"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Ayahuaska"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ayahuaska" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer4"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 239.0
+margin_right = 235.0
+margin_bottom = 261.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer5"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Tjatis Boomerang"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TjatisBoomerang" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer5"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 281.0
+margin_right = 235.0
+margin_bottom = 303.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer6"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Hanumans Tail"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="HanumansTail" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer6"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 323.0
+margin_right = 235.0
+margin_bottom = 345.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer7"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Trizul"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Trizul" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer7"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar"]
+margin_top = 365.0
+margin_right = 235.0
+margin_bottom = 387.0
+
+[node name="Label" type="Label" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer8"]
+margin_right = 209.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
+text = "Zephyrus Disc"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ZephyrusDisc" type="TextureRect" parent="Arkaplan/Container/VBoxContainer2/ColorRect/Bufflar/HBoxContainer8"]
+margin_left = 213.0
+margin_right = 235.0
+margin_bottom = 22.0
+texture = ExtResource( 7 )
+
+[node name="ToplamGuc" type="Label" parent="Arkaplan/Container/VBoxContainer2"]
+margin_top = 507.0
+margin_right = 246.0
+margin_bottom = 564.0
+custom_fonts/font = SubResource( 11 )
+text = "Total Power:
+"
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[connection signal="popup_hide" from="." to="." method="_on_TanriBilgileri_popup_hide"]
